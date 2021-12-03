@@ -1,0 +1,61 @@
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+</head>
+<body style="background-color:black; color:white">
+
+  <div id="NaarBoven" style="color:white">
+        <h1 style="text-align:center">Over ons</h1>
+  <div class="w3-bar w3-grey">
+  <a href="index.html" class="w3-bar-item w3-button">Home</a>
+  <a href="menu.html" class="w3-bar-item w3-button">Menu</a>
+  <a href="#" class="w3-bar-item w3-button">Bestellen</a>
+  <a href="#" class="w3-bar-item w3-button">Over ons</a>
+  <a href="https://nl.wikipedia.org/wiki/Hamburger" class="w3-bar-item w3-button">Hamburger</a>
+  <a href="https://www.youtube.com/watch?v=sHwvUFjaNdU" class="w3-bar-item w3-button">Hamburger rap</a>
+</div>
+
+<div style="color:white">
+  <p>Maar eerst iets over jou</p>
+</div>
+<button onclick="getLocation()">klik hier, nu</button>
+
+<p id="demo"></p>
+
+<script>
+var x = document.getElementById("demo");
+
+function getLocation() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(showPosition);
+  } else {
+    x.innerHTML = "Geolocation is not supported by this browser.";
+  }
+}
+
+function showPosition(position) {
+  x.innerHTML = "Latitude: " + position.coords.latitude +
+  "<br>Longitude: " + position.coords.longitude;
+}
+</script>
+<table style="width:100%">
+    <tr>
+        <td> <button onclick="myFunction1()">Over Floris</button> </td>
+        <td> <button onclick="myFunction2()">Over Timo</button> </td>
+        <td id="plaatjeHier"></td>
+    </tr>
+
+<p id="demo"></p>
+
+<script>
+    function myFunction1() {
+        document.getElementById("plaatjeHier").innerHTML = '<img src="https://media.s-bol.com/jZJ2Po5QqNGy/550x525.jpg" alt="Floris" width="600" height="600">';
+    }
+    function myFunction2() {
+        document.getElementById("plaatjeHier").innerHTML = '<img src="https://sites.mensenlinq.nl/mensenlinqads/full/Wegener/20170331/51194335.jpg" alt="Timo" width="450" height="600"> ';
+    }
+</script>
+
+</body>
+</html>
