@@ -2,6 +2,27 @@
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("#flip").click(function(){
+    $("#panel").slideDown("slow");
+  });
+});
+</script>
+<style>
+#panel, #flip {
+  padding: 5px;
+  text-align: center;
+  background-color: #e5eecc;
+  border: solid 1px #c3c3c3;
+}
+
+#panel {
+  padding: 50px;
+  display: none;
+}
+</style>
 </head>
 <body style="background-color:black; color:white">
 
@@ -12,6 +33,9 @@
   <a href="menu.html" class="w3-bar-item w3-button">Menu</a>
   <a href="bestellen.html" class="w3-bar-item w3-button">Bestellen</a>
   <a href="overOns.html" class="w3-bar-item w3-button">Over ons</a>
+  <a href="pandaWeetjes.html" class="w3-bar-item w3-button">Leuke panda weetjes</a>
+  <a href="https://nl.wikipedia.org/wiki/Hamburger" class="w3-bar-item w3-button">Hamburger</a>
+  <a href="https://www.youtube.com/watch?v=sHwvUFjaNdU" class="w3-bar-item w3-button">Hamburger rap</a>
 </div>
 
 <div style="color:white">
@@ -54,6 +78,11 @@ function showPosition(position) {
         document.getElementById("plaatjeHier").innerHTML = '<img src="https://sites.mensenlinq.nl/mensenlinqads/full/Wegener/20170331/51194335.jpg" alt="Timo" width="450" height="600"> ';
     }
 </script>
+ <div id="flip">Wie heeft wat gedaan: Timo</div>
+<div id="panel">jQuery, index en over ons</div>
+  
+ <div id="flip">Wie heeft wat gedaan: Floris</div>
+<div id="panel">menu, bestellen, opmaak en alle errors</div>
 
 </body>
 </html>
